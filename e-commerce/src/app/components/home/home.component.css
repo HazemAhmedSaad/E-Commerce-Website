@@ -1,5 +1,5 @@
 .slider img {
-  height: 90vh;
+  height: 95vh;
   object-fit: cover;
   object-position: center;
   filter: blur(1px);
@@ -30,16 +30,14 @@
 
 
 .bg-light-blue {
-  /* background-color: #e3f2fd;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%; */
   background-image: url(../../../../public/assets/bg-01.png);
   background-position: top center;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 
 .bg-light-blue img {
@@ -73,7 +71,8 @@
 .first-card {
   cursor: pointer;
 }
-.properties{
+
+.properties {
   display: flex;
 }
 
@@ -90,16 +89,111 @@
   width: 90px;
   height: 80px;
 }
+
 .properties div h3 {
   font-weight: 700;
   font-size: 20px;
   margin: 0;
   padding: 0;
 }
+
 .properties div span {
   font-weight: 500;
   color: rgb(0, 0, 0, 0.66);
   margin-top: 5px;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+
+
+
+/* about */
+
+.about-text {
+  text-align: center;
+}
+
+.about-text h6 {
+  font-weight: 500;
+  color: rgb(0, 0, 0, 0.66);
+  line-height: 1.25em;
+  font-size: 1.5rem;
+}
+
+.about-text h2 {
+  font-weight: 700;
+  line-height: 1.3em;
+  font-size: 2.5rem;
+}
+
+.about-text p {
+  color: rgb(0, 0, 0, 0.66);
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.headphone {
+  height: 100vh;
+  background-image: url(../../../../public/assets/heaphone.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgb(0, 0, 0, 0.1);
+  background-blend-mode: darken;
+  filter: blur(0.5px);
+  margin-bottom: 150px !important;
+}
+
+.headphone-card {
+  background-image: linear-gradient(to right, #f42c37 20%, rgba(255, 255, 255, 0.7));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 80vh;
+  color: white;
+  bottom: -80px;
+  position: absolute;
+  background-attachment: fixed;
+  border-radius: 3px;
+}
+
+.headphone-card img {
+  width: 300px;
+  transition: all 0.5s ease;
+}
+
+.headphone-card img:hover {
+  transform: scale(1.05);
+}
+
+.headphone-text {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.headphone-text p {
+  font-weight: 700;
+  color: rgb(0, 0, 0, 0.66);
+  line-height: 1.25em;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .about-text h2 {
+    padding: 0 150px;
+  }
+
+  .about-text p {
+    padding: 0 150px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -107,7 +201,38 @@
     font-size: 3rem;
   }
 
+  .bg-light-blue {
+    height: 85vh;
+  }
+
   .bg-light-blue img {
     width: 350px;
   }
+
+  .headphone .container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .headphone-card {
+    margin: 0;
+    width: 350px;
+    height: 60vh;
+    /* margin-top: 30px; */
+    background-image: linear-gradient(to right, #e72424 60%, rgba(255, 255, 255, 0.8) )
+  }
+
+  .headphone-card img {
+    width: 250px;
+  }
+  .headphone-text {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .headphone-text h5{
+    font-size: 18px;
+  }
+
 }
