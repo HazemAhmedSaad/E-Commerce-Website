@@ -64,7 +64,8 @@
   transition: all 0.5s ease;
 }
 
-.card img:hover {
+.first-card .card img:hover,
+.offer .card img:hover {
   transform: scale(1.1);
 }
 
@@ -175,7 +176,6 @@
 }
 
 .headphone-text {
-  /* margin-top: 15px; */
   text-align: center;
 }
 
@@ -189,16 +189,23 @@
 .digital .card {
   position: relative;
   overflow: visible;
-  height: 350px;
+  height: 330px;
   width: 100%;
   border-radius: 25px;
+  margin: auto;
+}
 
+.digital .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .digital .card h4 {
-
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 46px;
   letter-spacing: -1px;
   color: #fff;
@@ -216,19 +223,22 @@
 
 .digital .card h2 {
   font-family: montserrat, Sans-serif;
-  /* font-size: 65px; */
+  font-size: 40px;
   font-weight: 900;
   line-height: 61px;
   letter-spacing: -1.3px;
-  /* margin: 0 0 -57px; */
 }
 
-.digital img {
+.digital .card img {
   margin: 0 auto;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .digital .earphone {
@@ -237,50 +247,177 @@
   transition: all .4s ease-in-out 70ms;
 }
 
-.digital .earphone .card-body button {
+.digital .earphone .card-body h2 {
+  color: #444;
+}
+
+.digital .card-body button {
   border: 0;
   font-size: 16px;
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 100em;
+  position: absolute;
+  bottom: 30px;
+  background-color: #fff;
+  padding: 10px 30px;
 }
 
-.digital .earphone .card-body button {
-  padding: 10px 30px;
-  background-color: #f42c37;
-  /* text-shadow: 0 0 10px transparent; */
-  color: #fff;
 
+.digital .earphone .card-body button {
+  background-color: #f42c37;
+  color: #fff;
+}
+
+.digital .earphone img {
+  width: 350px;
+  border: 0;
+}
+
+.digital .earphone .card-body button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .digital .gadgets {
-  background-color: transparent !important;
+  background-color: transparent;
   background-image: radial-gradient(at center center, #fec62e 0%, #fec62e 100%);
 }
 
+.digital .gadgets img {
+  width: 350px;
+  top: -30px;
+  right: -65px;
+}
 
+.digital .gadgets .card-body h2 {
+  color: #ffd76a;
+}
 
+.digital .gadgets .card-body button {
+  color: #fec62e;
+}
+
+.digital .gadgets .card-body button:hover {
+  background-color: #000;
+  color: #fff;
+}
 
 .digital .laptop {
-  background-color: transparent !important;
+  background-color: transparent;
   background-image: linear-gradient(90deg, #f42c37 61%, #ff4e59 100%)
+}
+
+.digital .laptop img {
+  width: 480px;
+  bottom: -40px;
+  right: -65px;
+}
+
+.digital .laptop .card-body {
+  margin-left: 40px;
+}
+
+.digital .laptop .card-body h2 {
+  color: #f6565f;
+  font-size: 50px;
+}
+
+.digital .laptop .card-body button {
+  color: #ff4e59;
+}
+
+.digital .laptop .card-body button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 
 .digital .console {
-  background-color: transparent !important;
+  background-color: transparent;
   background-image: linear-gradient(180deg, #edeced 0%, #eef0f3 100%)
 }
 
+.digital .console img {
+  width: 250px;
+  right: 0;
+  bottom: -40px;
+}
+
+.digital .console .card-body {
+  margin-left: 40px;
+}
+
+.digital .console .card-body h4 {
+  color: #000;
+}
+
+.digital .console .card-body p {
+  color: #000;
+}
+
+.digital .console .card-body h2 {
+  color: #fff;
+  font-size: 50px;
+}
+
+.digital .console .card-body button {
+  background-color: #f42c37;
+  color: #fff;
+}
+
+.digital .console .card-body button:hover {
+  background-color: #000;
+}
+
 .digital .oculus {
-  background-color: #2dd06f !important;
-  /* background-image: linear-gradient(300deg, #2dd06f 0%, #2dd06f 100%) */
+  background-color: #2dd06f;
   overflow: hidden;
 }
 
+.digital .oculus img {
+  width: 500px;
+  right: -10px;
+  bottom: 30px;
+  transform: scale(1.3);
+}
+
+.digital .oculus .card-body h2 {
+  color: #57d68b;
+}
+
+.digital .oculus .card-body button {
+  color: #2dcc6e;
+}
+
+.digital .oculus .card-body button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .digital .speaker {
-  background-color: transparent !important;
+  background-color: transparent;
   background-image: linear-gradient(180deg, #1478ff 0%, #1891ff 100%);
   overflow: hidden;
+}
+
+.digital .speaker img {
+  width: 350px;
+  right: -55px;
+  bottom: -30px;
+}
+
+.digital .speaker .card-body h2 {
+  color: #3a98ff;
+
+}
+
+.digital .speaker .card-body button {
+  color: #1a9dff;
+}
+
+.digital .speaker .card-body button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 @media screen and (min-width: 992px) {
